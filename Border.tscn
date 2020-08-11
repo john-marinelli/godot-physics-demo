@@ -1,0 +1,16 @@
+[gd_scene format=2]
+
+[node name="Border" type="StaticBody2D"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color( 0.647059, 0.654902, 1, 1 )
+polygon = PoolVector2Array( -128, -8, -128, 8, 128, 8, 128, -8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 128, 8, 128, -8, -128, -8, -128, 8 )
+__meta__ = {
+"_edit_group_": true
+}

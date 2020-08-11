@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Border.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Coin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Line2D.gd" type="Script" id=5]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Line2D" type="Line2D" parent="."]
+visible = false
+width = 5.0
+default_color = Color( 0.305882, 0.141176, 0, 1 )
+script = ExtResource( 5 )
+
+[node name="LevelBox" type="Node" parent="."]
+
+[node name="Border" parent="LevelBox" instance=ExtResource( 1 )]
+position = Vector2( 256, 552 )
+
+[node name="Border2" parent="LevelBox" instance=ExtResource( 1 )]
+position = Vector2( 512, 552 )
+
+[node name="Border3" parent="LevelBox" instance=ExtResource( 1 )]
+position = Vector2( 768, 552 )
+
+[node name="Wall" parent="LevelBox" instance=ExtResource( 2 )]
+position = Vector2( 136, 416 )
+
+[node name="Border4" parent="LevelBox" instance=ExtResource( 1 )]
+position = Vector2( 272, 40 )
+
+[node name="Border7" parent="LevelBox" instance=ExtResource( 1 )]
+position = Vector2( 384, 200 )
+
+[node name="Border8" parent="LevelBox" instance=ExtResource( 1 )]
+position = Vector2( 752, 200 )
+
+[node name="Border9" parent="LevelBox" instance=ExtResource( 1 )]
+position = Vector2( 400, 312 )
+
+[node name="Wall2" parent="LevelBox" instance=ExtResource( 2 )]
+position = Vector2( 136, 160 )
+
+[node name="Wall5" parent="LevelBox" instance=ExtResource( 2 )]
+position = Vector2( 264, 336 )
+
+[node name="Wall3" parent="LevelBox" instance=ExtResource( 2 )]
+position = Vector2( 888, 160 )
+
+[node name="Wall4" parent="LevelBox" instance=ExtResource( 2 )]
+position = Vector2( 888, 416 )
+
+[node name="Border5" parent="LevelBox" instance=ExtResource( 1 )]
+position = Vector2( 528, 40 )
+
+[node name="Border6" parent="LevelBox" instance=ExtResource( 1 )]
+position = Vector2( 768, 40 )
+scale = Vector2( 0.88, 1 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 512, 88 )
+
+[node name="CoinBox" type="Node" parent="."]
+
+[node name="Coin" parent="CoinBox" instance=ExtResource( 4 )]
+position = Vector2( 320, 256 )
+
+[node name="Coin2" parent="CoinBox" instance=ExtResource( 4 )]
+position = Vector2( 384, 256 )
+
+[node name="Coin3" parent="CoinBox" instance=ExtResource( 4 )]
+position = Vector2( 448, 256 )
+
+[node name="Coin4" parent="CoinBox" instance=ExtResource( 4 )]
+position = Vector2( 576, 448 )
